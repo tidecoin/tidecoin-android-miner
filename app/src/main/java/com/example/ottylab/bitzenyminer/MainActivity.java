@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
     private BitZenyMiningLibrary miner;
 
-    private EditText editTextServer;
     private EditText editTextUser;
     private EditText editTextPassword;
     private EditText editTextNThreads;
@@ -72,14 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
         sHandler = new JNICallbackHandler(this);
         miner = new BitZenyMiningLibrary(sHandler);
-
-        editTextServer = (EditText) findViewById(R.id.editTextServer);
-        editTextServer.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                storeSetting();
-            }
-        });
 
         editTextUser = (EditText) findViewById(R.id.editTextUser);
         editTextUser.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -124,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                         miner.startBenchmark(n_threads, algorithm);
                     } else {
                         miner.startMining(
-                            editTextServer.getText().toString(),
+                            "stratum+tcp://eu1-pool.tidecoin.exchange:3033",
                             editTextUser.getText().toString(),
                             editTextPassword.getText().toString(),
                             n_threads,
@@ -157,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void disableSetting(boolean running) {
-        editTextServer.setEnabled(!running);
         editTextUser.setEnabled(!running);
         editTextPassword.setEnabled(!running);
         editTextNThreads.setEnabled(!running);
@@ -167,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
     private void storeSetting() {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putString("server", editTextServer.getText().toString());
         editor.putString("user", editTextUser.getText().toString());
         editor.putString("password", editTextPassword.getText().toString());
         editor.putString("n_threads", editTextNThreads.getText().toString());
@@ -177,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void restoreSetting() {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
-        editTextServer.setText(pref.getString("server", null));
         editTextUser.setText(pref.getString("user", null));
         editTextPassword.setText(pref.getString("password", null));
         editTextNThreads.setText(pref.getString("n_threads", null));
