@@ -1,4 +1,6 @@
 /*-
+ * Copyright 2019 Yenten team
+ /*-
  * Copyright 2009 Colin Percival
  * Copyright 2012-2018 Alexander Peslyak
  * All rights reserved.
@@ -37,7 +39,7 @@
  * both algorithms to co-exist in client and miner implementations (such as in
  * preparation for a hard-fork).
  */
- 
+
 #include "miner.h"
 #include "yespower.h"
 #include "yespower-opt.c"
@@ -66,8 +68,8 @@ int scanhash_yespower(int thr_id, uint32_t *pdata,
 {
 	static const yespower_params_t params = {
 		.version = YESPOWER_1_0,
-		.N = 4096,
-		.r = 16,
+		.N = 2048,
+		.r = 8,
 		.pers = NULL,
 		.perslen = 0
 	};
