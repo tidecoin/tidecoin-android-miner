@@ -33,17 +33,6 @@ public class BitZenyMiningLibrary {
         }
     }
 
-    public int startBenchmark(int n_threads, Algorithm algo) {
-        switch (algo) {
-            case YESCRYPT:
-                return startBenchmark(n_threads, 0);
-            case YESPOWER:
-                return startBenchmark(n_threads, 1);
-            default:
-                return -1;
-        }
-    }
-
     private static void output(String message) {
         // Generate message
         Message msg = new Message();
@@ -59,5 +48,4 @@ public class BitZenyMiningLibrary {
     public native boolean isMiningRunning();
     public native int stopMining();
     private native int startMining(String url, String user, String password, int n_threads, int algo);
-    private native int startBenchmark(int n_threads, int algo);
 }

@@ -1,6 +1,4 @@
 /*-
- * Copyright 2019 Yenten team
- /*-
  * Copyright 2009 Colin Percival
  * Copyright 2012-2018 Alexander Peslyak
  * All rights reserved.
@@ -45,13 +43,6 @@
 #include "yespower-opt.c"
 
 static const yespower_params_t yespower_BITZENY = {YESPOWER_1_0, 4096, 16, NULL, 0};
-
-void yespower_hash( const char *input, char *output, uint32_t len )
-{
-  yespower_tls( (yespower_binary_t*)input, len,
-                &yespower_BITZENY,
-                (yespower_binary_t*)output );
-}
 
 extern struct work_restart *work_restart;
 

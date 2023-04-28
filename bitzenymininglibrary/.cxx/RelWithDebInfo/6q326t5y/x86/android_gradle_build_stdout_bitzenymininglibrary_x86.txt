@@ -1,0 +1,43 @@
+ninja: Entering directory `C:\wallet_app\tidecoin-android-miner\bitzenymininglibrary\.cxx\RelWithDebInfo\6q326t5y\x86'
+[1/16] Building ASM object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt-arm.S.o
+[2/16] Building ASM object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt-x86.S.o
+[3/16] Building ASM object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2-arm.S.o
+[4/16] Building ASM object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt-x64.S.o
+[5/16] Building ASM object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2-x64.S.o
+[6/16] Building ASM object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2-x86-notextrel.S.o
+[7/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt.c.o
+[8/16] Building CXX object CMakeFiles/bitzenymininglibrary.dir/src/main/cpp/bitzenymininglibrary.cpp.o
+[9/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/util.c.o
+[10/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/yespower/sha256.c.o
+[11/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/libcpuminer.c.o
+[12/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/yespower/yespower.c.o
+../../../../src/main/cpp/libcpuminer/yespower/yespower.c:3:2: warning: '/*' within block comment [-Wcomment]
+ /*-
+ ^
+In file included from ../../../../src/main/cpp/libcpuminer/yespower/yespower.c:45:
+../../../../src/main/cpp/libcpuminer/yespower/yespower-opt.c:57:2: warning: "Note: AVX and XOP are not enabled.  That's OK." [-W#warnings]
+#warning "Note: AVX and XOP are not enabled.  That's OK."
+ ^
+../../../../src/main/cpp/libcpuminer/yespower/yespower-opt.c:114:9: warning: 'unlikely' macro redefined [-Wmacro-redefined]
+#define unlikely(exp) __builtin_expect(exp, 0)
+        ^
+../../../../src/main/cpp/libcpuminer\miner.h:61:9: note: previous definition is here
+#define unlikely(expr) (__builtin_expect(!!(expr), 0))
+        ^
+../../../../src/main/cpp/libcpuminer/yespower/yespower.c:51:17: warning: incompatible pointer types passing 'yespower_binary_t *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') [-Wincompatible-pointer-types]
+  yespower_tls( (yespower_binary_t*)input, len,
+                ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../src/main/cpp/libcpuminer/yespower/yespower-opt.c:1129:33: note: passing argument to parameter 'src' here
+int yespower_tls(const uint8_t *src, size_t srclen,
+                                ^
+4 warnings generated.
+[13/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2.c.o
+[14/16] Building C object src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/yescrypt.c.o
+In file included from ../../../../src/main/cpp/libcpuminer/yescrypt.c:22:
+In file included from ../../../../src/main/cpp/libcpuminer/yescrypt-best.c:2:
+../../../../src/main/cpp/libcpuminer/yescrypt-simd.c:43:2: warning: "Consider enabling SSE4.1, AVX, or XOP in the C compiler for significantly better performance" [-W#warnings]
+#warning "Consider enabling SSE4.1, AVX, or XOP in the C compiler for significantly better performance"
+ ^
+1 warning generated.
+[15/16] Linking C static library src\main\cpp\libcpuminer\libcpuminer.a
+[16/16] Linking CXX shared library ..\..\..\..\build\intermediates\cxx\RelWithDebInfo\6q326t5y\obj\x86\libbitzenymininglibrary.so

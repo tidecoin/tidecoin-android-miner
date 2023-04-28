@@ -1,12 +1,10 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 24
+        targetSdkVersion 33
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
@@ -32,7 +30,7 @@ android {
         }
         kitkat {
             dimension 'default'
-            minSdkVersion 19
+            minSdkVersion 24
             externalNativeBuild {
                 cmake {
                     cFlags "-D__KITKAT__"
@@ -49,6 +47,7 @@ android {
             path "CMakeLists.txt"
         }
     }
+    namespace 'com.example.ottylab.bitzenymininglibrary'
 
 }
 

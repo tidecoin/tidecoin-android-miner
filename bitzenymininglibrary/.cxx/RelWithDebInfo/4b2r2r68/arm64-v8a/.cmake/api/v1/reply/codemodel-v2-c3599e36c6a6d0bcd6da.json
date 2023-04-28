@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/main/cpp/libcpuminer",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/main/cpp/libcpuminer",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "bitzenymininglibrary::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bitzenymininglibrary-RelWithDebInfo-eb7d485157cad2f59b8f.json",
+					"name" : "bitzenymininglibrary",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cpuminer::@43635da1f4efc7a9a27d",
+					"jsonFile" : "target-cpuminer-RelWithDebInfo-209c518ab861c4b0bc58.json",
+					"name" : "cpuminer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/RelWithDebInfo/4b2r2r68/arm64-v8a",
+		"source" : "C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

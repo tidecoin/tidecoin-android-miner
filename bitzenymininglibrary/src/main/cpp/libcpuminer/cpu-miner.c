@@ -688,6 +688,10 @@ static void share_result(int result, const char *reason)
 		   s,
 		   result ? "(yay!!!)" : "(booooo)");
 
+    if (result){
+        applog(LOG_INFO, s)
+    }
+
 	if (opt_debug && reason)
 		applog(LOG_DEBUG, "DEBUG: reject reason: %s", reason);
 }

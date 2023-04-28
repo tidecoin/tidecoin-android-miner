@@ -67,7 +67,6 @@ JNICALL
 Java_com_example_ottylab_bitzenymininglibrary_BitZenyMiningLibrary_isMiningRunning(
         JNIEnv *env,
         jobject /* this */) {
-    Log("isMiningRunning");
     return (jboolean) is_running();
 }
 

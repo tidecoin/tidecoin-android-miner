@@ -1,0 +1,6 @@
+C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/x86/CMakeFiles/bitzenymininglibrary.dir
+C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/x86/CMakeFiles/edit_cache.dir
+C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/x86/CMakeFiles/rebuild_cache.dir
+C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/x86/src/main/cpp/libcpuminer/CMakeFiles/edit_cache.dir
+C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/x86/src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir
+C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/x86/src/main/cpp/libcpuminer/CMakeFiles/rebuild_cache.dir

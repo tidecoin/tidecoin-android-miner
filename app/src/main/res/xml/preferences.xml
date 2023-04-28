@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:selectable="false"
+    android:enabled="true"
+    android:key="example_key"
+    android:title="example_title"
+    android:summary="anything_you_want"
+    android:persistent="true">
+
+    <PreferenceCategory android:title="Your TDC Address">
+        <EditTextPreference
+            android:id="@+id/tdc_address_selected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:title="Please tab to set your address"
+            android:textSize="12dp"
+            android:hint="your tdc address"
+            android:key="@string/tdc_address_selected"
+            android:textColorHint="@color/txt_inactive"
+            android:textColor="#e85238"
+            android:inputType="textPersonName"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Mining Options">
+        <ListPreference
+            android:id="@+id/mining_pool_selected"
+            android:defaultValue="2"
+            android:dialogTitle="@string/mining_pool"
+            android:entries="@array/pref_mining_pool"
+            android:entryValues="@array/pref_duration"
+            android:key="@string/mining_pool_selected"
+            android:summary="@string/mining_pool_prefs"
+            android:title="Mining Pool" />
+
+        <SwitchPreference
+            android:id="@+id/limit_data_usage_selected"
+            android:defaultValue="false"
+            android:key="@string/limit_data_usage_selected"
+            android:summary="@string/mine_wifi"
+            android:title="@string/avoid_mobile_usage" />
+
+        <ListPreference
+            android:id="@+id/cpu_threads_enabled"
+            android:defaultValue="2"
+            android:dialogTitle="@string/cpu_threads_groups"
+            android:entries="@array/pref_thread_number"
+            android:entryValues="@array/pref_duration"
+            android:key="@string/cpu_threads_enabled"
+            android:summary="@string/enable_second_thread"
+            android:title="@string/enable_second_thread_description" />
+    </PreferenceCategory>
+
+    <!--below line is to create preference category-->
+    <PreferenceCategory android:title="Battery Settings">
+
+        <SwitchPreference
+            android:id="@+id/accu_for_mining"
+            android:defaultValue="false"
+            android:key="@string/accu_for_mining"
+            android:summary="@string/accu_mining_desc"
+            android:title="@string/accu_mining_title" />
+
+        <!--below list preference is use for
+    double tap to seek option-->
+        <ListPreference
+            android:id="@+id/battery_level_min_selected"
+            android:defaultValue="4"
+            android:dialogTitle="@string/battery_level_min"
+            android:entries="@array/pref_battery_level"
+            android:entryValues="@array/pref_duration"
+            android:key="@string/battery_level_min_selected"
+            android:summary="@string/seconds"
+            android:title="@string/battery_level_min" />
+
+        <ListPreference
+            android:id="@+id/battery_temp_max_selected"
+            android:defaultValue="1"
+            android:dialogTitle="@string/battery_temp_max"
+            android:entries="@array/pref_battery_temp_max"
+            android:entryValues="@array/pref_duration"
+            android:key="@string/battery_temp_max_selected"
+            android:summary="Max Battery Temp"
+            android:title="@string/remind_me" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\android.toolchain.cmake",
+    "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\android-legacy.toolchain.cmake",
+    "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\src\\main\\cpp\\libcpuminer\\CMakeLists.txt",
+    "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\platforms.cmake",
+    "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\compiler_id.cmake",
+    "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\x86\" clean"
+  ],
+  "buildTargetsCommand": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "bitzenymininglibrary-Debug-x86": {
+      "artifactName": "bitzenymininglibrary",
+      "buildCommand": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\x86\" bitzenymininglibrary",
+      "abi": "x86",
+      "output": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\build\\intermediates\\cmake\\kitkatDebug\\obj\\x86\\libbitzenymininglibrary.so"
+    },
+    "cpuminer-Debug-x86": {
+      "artifactName": "cpuminer",
+      "buildCommand": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\x86\" cpuminer",
+      "abi": "x86",
+      "output": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\x86\\src\\main\\cpp\\libcpuminer\\libcpuminer.a"
+    }
+  }
+}

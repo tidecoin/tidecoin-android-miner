@@ -1,186 +1,205 @@
 package com.example.ottylab.bitzenyminer;
 
-import android.content.SharedPreferences;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Message;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.ottylab.bitzenymininglibrary.BitZenyMiningLibrary;
+import com.github.anastr.speedviewlib.TubeSpeedometer;
+import com.github.anastr.speedviewlib.components.Section;
 
-import java.lang.ref.WeakReference;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.preference.PreferenceManager;
 
 public class MainActivity extends AppCompatActivity {
+
     private static final String TAG = "BitZenyMiner";
     private static final int LOG_LINES = 1000;
+    private Button settingsBtn;
+    private TextView textViewLog, tvHashrate, accuTemp;
+    private TextView userAddress;
+    private float hashrateUnconfirmedMax = 1;
+    private float hashrateConfirmedMax = 1;
+    private int batteryTemp;
 
-    private BitZenyMiningLibrary miner;
+    //graühicla elements
+    TubeSpeedometer meterHashrate;
+    TubeSpeedometer meterCores;
+    TubeSpeedometer meter_cores_gap;
+    TubeSpeedometer meter_accepted_hash;
 
-    private EditText editTextUser;
-    private EditText editTextPassword;
-    private EditText editTextNThreads;
-    private Button buttonDrive;
-    private CheckBox checkBoxBenchmark;
-    private Spinner spinnerAlgorithm;
-    private TextView textViewLog;
 
-    private boolean running;
-    private BlockingQueue<String> logs = new LinkedBlockingQueue<>(LOG_LINES);
-
-    private static class JNICallbackHandler extends Handler {
-        private final WeakReference<MainActivity> activity;
-
-        public JNICallbackHandler(MainActivity activity) {
-            this.activity = new WeakReference<MainActivity>(activity);
-        }
-
-        @Override
-        public void handleMessage(Message msg) {
-            MainActivity activity = this.activity.get();
-            if (activity != null) {
-                String log = msg.getData().getString("log");
-                String logs = Utils.rotateStringQueue(activity.logs, log);
-                activity.textViewLog.setText(logs);
-                Log.d(TAG, log);
-            }
-        }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // This registers messageReceiver to receive messages.
+        LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiverHashrate, new IntentFilter("my-message"));
+        LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiverLogs, new IntentFilter("my-log"));
     }
 
-    private static JNICallbackHandler sHandler;
+    // Handling the received Intents for the "hashrateConfirmed" event
+    private final BroadcastReceiver messageReceiverHashrate = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            double activeCores = intent.getDoubleExtra("activeCores", 0);
+            double cpuCoresMax = intent.getDoubleExtra("possibleCores", 1);
+
+            //  1. show hashrate
+            double hashrateNormal = intent.getDoubleExtra("hashrateNormal", 1);
+            //meterHashrate.makeSections(1, getResources().getColor(R.color.c_blue), Section.Style.SQUARE);
+            // will set the highest value as maximum hashrate
+            if (hashrateUnconfirmedMax < ((float) (hashrateNormal * cpuCoresMax))) {
+                hashrateUnconfirmedMax = ((float) (hashrateNormal * cpuCoresMax));
+                meterHashrate.setMaxSpeed(hashrateUnconfirmedMax);
+            }
+            meterHashrate.speedTo((float) (hashrateNormal * activeCores));
+
+            // 2. show mining cores
+            meterCores.setMaxSpeed((float) cpuCoresMax);
+            meterCores.speedTo((float) activeCores, 1);
+
+            // 3. meter cores gap
+            double batteryTempMax = intent.getDoubleExtra("batteryTempMax", 1);
+            //meter_cores_gap.makeSections((int) cpuCoresMax, getResources().getColor(R.color.c_red_bright), Section.Style.SQUARE);
+            meter_cores_gap.setMaxSpeed((float) cpuCoresMax);
+            meter_cores_gap.speedTo((float) activeCores, 1);
+
+            // 4. confirmed hashrate
+            double hashrateConfirmed = intent.getDoubleExtra("hashrateConfirmed", 0);
+            //meter_accepted_hash.makeSections(1, getResources().getColor(R.color.c_yellow), Section.Style.SQUARE);
+            if (hashrateConfirmedMax < ((float) ((hashrateConfirmed / activeCores) * cpuCoresMax))) {
+                hashrateConfirmedMax = ((float) ((hashrateConfirmed / activeCores) * cpuCoresMax));
+                meter_accepted_hash.setMaxSpeed(hashrateConfirmedMax);
+            }
+            meter_accepted_hash.speedTo((float) hashrateConfirmed);
+
+            // 5. set hashrate to string
+            if(hashrateNormal == 0) {
+                tvHashrate.setText("0");
+            }else{
+                tvHashrate.setText("~"+String.valueOf(Math.round(hashrateNormal*activeCores)));
+            }
+
+            // 6. show accu temp
+            accuTemp.setText(String.valueOf(batteryTemp));
+
+
+            // tdcAddress
+            String tdcAddress = intent.getStringExtra("tdcAddress");
+            userAddress.setText(tdcAddress);
+        }
+    };
+
+    // Handling the received Intents for the "hashrateConfirmed" event
+    private final BroadcastReceiver messageReceiverLogs = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Extract data included in the Intent
+            String receivedMessage = intent.getStringExtra("logmessage");
+            textViewLog.setText(receivedMessage);
+        }
+    };
+
+    @Override
+    protected void onPause() {
+        // Unregister since the activity is not visible
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiverHashrate);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiverLogs);
+        super.onPause();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            // TODO Extract the data returned from the child Activity.
+            String returnValue = data.getStringExtra("some_key");
+            userAddress.setText(returnValue);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        showDeviceInfo();
+        meterHashrate = findViewById(R.id.meter_hashrate);
+        meterCores = findViewById(R.id.meter_cores);
+        meter_cores_gap = findViewById(R.id.meter_cores_gap);
+        meter_accepted_hash = findViewById(R.id.meter_accepted_hash);
 
-        sHandler = new JNICallbackHandler(this);
-        miner = new BitZenyMiningLibrary(sHandler);
 
-        editTextUser = (EditText) findViewById(R.id.editTextUser);
-        editTextUser.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                storeSetting();
-            }
-        });
+        // provide text edit for mining address
+        userAddress = (TextView) findViewById(R.id.editTextUser);
 
-        editTextPassword= (EditText) findViewById(R.id.editTextPassword);
-        editTextPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                storeSetting();
-            }
-        });
+        String tdcAddress = PreferenceManager.getDefaultSharedPreferences(this).getString("tdc_address_selected", null);
+        userAddress.setText(tdcAddress);
 
-        editTextNThreads = (EditText) findViewById(R.id.editTextNThreads);
-        editTextNThreads.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                storeSetting();
-            }
-        });
-
-        buttonDrive = (Button) findViewById(R.id.buttonDrive);
-        buttonDrive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (running) {
-                    Log.d(TAG, "Stop");
-                    miner.stopMining();
-                } else {
-                    Log.d(TAG, "Start");
-                    int n_threads = 0;
-                    try {
-                        n_threads = Integer.parseInt(editTextNThreads.getText().toString());
-                    } catch (NumberFormatException e){}
-
-                    BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
-                    if (checkBoxBenchmark.isChecked()) {
-                        miner.startBenchmark(n_threads, algorithm);
-                    } else {
-                        miner.startMining(
-                            "stratum+tcp://eu1-pool.tidecoin.exchange:3033",
-                            editTextUser.getText().toString(),
-                            editTextPassword.getText().toString(),
-                            n_threads,
-                            algorithm);
-                    }
-                }
-
-                changeState(!running);
-                storeSetting();
-            }
-        });
-
-        checkBoxBenchmark = (CheckBox) findViewById(R.id.checkBoxBenchmark);
-        spinnerAlgorithm = (Spinner) findViewById(R.id.spinnerAlgorithm);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.algorithms, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerAlgorithm.setAdapter(adapter);
-
+        // provide textViewLog
         textViewLog = (TextView) findViewById(R.id.textViewLog);
         textViewLog.setMovementMethod(new ScrollingMovementMethod());
+        tvHashrate = findViewById(R.id.hashrate);
+        accuTemp = findViewById(R.id.accuTemp);
 
-        restoreSetting();
-        changeState(miner.isMiningRunning());
-    }
+        // default hashrate to string
+        TextView tvHashrate = findViewById(R.id.hashrate);
+        tvHashrate.setText("-");
 
-    private void changeState(boolean running) {
-        buttonDrive.setText(running ? "Stop" : "Start");
-        disableSetting(running);
-        this.running = running;
-    }
-
-    private void disableSetting(boolean running) {
-        editTextUser.setEnabled(!running);
-        editTextPassword.setEnabled(!running);
-        editTextNThreads.setEnabled(!running);
-        spinnerAlgorithm.setEnabled(!running);
-    }
-
-    private void storeSetting() {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putString("user", editTextUser.getText().toString());
-        editor.putString("password", editTextPassword.getText().toString());
-        editor.putString("n_threads", editTextNThreads.getText().toString());
-        editor.putInt("algorithm", spinnerAlgorithm.getSelectedItemPosition());
-        editor.commit();
-    }
-
-    private void restoreSetting() {
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
-        editTextUser.setText(pref.getString("user", null));
-        editTextPassword.setText(pref.getString("password", null));
-        editTextNThreads.setText(pref.getString("n_threads", null));
-        spinnerAlgorithm.setSelection(pref.getInt("algorithm", 0));
-    }
-
-    private void showDeviceInfo() {
-        String[] keys = new String[]{ "os.arch", "os.name", "os.version" };
-        for (String key : keys) {
-            Log.d(TAG, key + ": " + System.getProperty(key));
+        // Foreground Service
+        if(!foregroundServiceRunning()) {
+            Intent serviceIntentForeground = new Intent(this, MiningForeGroundService.class);
+            startForegroundService(serviceIntentForeground);
         }
-        Log.d(TAG, "CODE NAME: " + Build.VERSION.CODENAME);
-        Log.d(TAG, "SDK INT: " + Build.VERSION.SDK_INT);
-        Log.d(TAG, "MANUFACTURER: " + Build.MANUFACTURER);
-        Log.d(TAG, "MODEL: " + Build.MODEL);
-        Log.d(TAG, "PRODUCT: " + Build.PRODUCT);
+
+        // activate bazzery temp check
+        IntentFilter intentfilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        MainActivity.this.registerReceiver(broadcastreceiver,intentfilter);
+
+        // activate settings button
+        // initializing our button.
+        settingsBtn = findViewById(R.id.idBtnSettings);
+
+        // adding on click listener for our button.
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // opening a new intent to open settings activity.
+                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(i);
+            }
+        });
     }
+
+    public boolean foregroundServiceRunning(){
+        ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        for(ActivityManager.RunningServiceInfo service: activityManager.getRunningServices(Integer.MAX_VALUE)) {
+            if(MiningForeGroundService.class.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+
+        Toast.makeText(getApplicationContext(), "Miner is running as foreground Service", Toast.LENGTH_SHORT).show();
+
+        return false;
+    }
+
+    private final BroadcastReceiver broadcastreceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            batteryTemp = (int)(intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE,0))/10;
+        }
+    };
+
 }

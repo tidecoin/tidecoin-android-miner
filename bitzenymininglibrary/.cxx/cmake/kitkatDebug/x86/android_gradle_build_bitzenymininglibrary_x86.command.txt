@@ -1,0 +1,7 @@
+Executable : C:\android\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+C:\wallet_app\tidecoin-android-miner\bitzenymininglibrary\.cxx\cmake\kitkatDebug\x86
+bitzenymininglibrary
+jvmArgs : 
+
