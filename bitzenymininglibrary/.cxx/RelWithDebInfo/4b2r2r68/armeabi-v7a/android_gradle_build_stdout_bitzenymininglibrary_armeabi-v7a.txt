@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\wallet_app\tidecoin-android-miner\bitzenymininglibrary\.cxx\RelWithDebInfo\4b2r2r68\armeabi-v7a'
+ninja: no work to do.

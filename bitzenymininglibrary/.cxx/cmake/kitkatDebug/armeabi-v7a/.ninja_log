@@ -1,0 +1,19 @@
+# ninja log v5
+4	868	682463883	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt.c.o	60efa059b3227767
+15	949	682463883	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2.c.o	83e40e56350fb36
+57	1321	682463884	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/yespower/sha256.c.o	4dce45ffe6ee54fe
+32	1658	682463884	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/util.c.o	4d0a7caa6d3e3ba0
+53	1664	682463884	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/libcpuminer.c.o	20c6f39a7419e1d7
+1	1858	682463884	CMakeFiles/bitzenymininglibrary.dir/src/main/cpp/bitzenymininglibrary.cpp.o	7ec196f2e2cec9b2
+49	2469	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2-x64.S.o	2e3794b53bef42e0
+24	2478	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2-x86-notextrel.S.o	6174017e06074f29
+10	2491	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt-x64.S.o	808de1c1a8df9071
+12	2562	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt-x86.S.o	10ecef11183fd134
+7	2573	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/scrypt-arm.S.o	c8ac98ff78de9e36
+40	2603	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/yescrypt.c.o	e9f2318a86ef60ab
+19	2646	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/sha2-arm.S.o	6681c75f6758462b
+44	2936	682463885	src/main/cpp/libcpuminer/CMakeFiles/cpuminer.dir/yespower/yespower.c.o	1650830355274f3e
+2937	3149	682463885	src/main/cpp/libcpuminer/libcpuminer.a	b6a8cdee6ed94c02
+3150	4672	682463887	../../../../build/intermediates/cmake/kitkatDebug/obj/armeabi-v7a/libbitzenymininglibrary.so	164b3786e4414a59
+0	15	0	clean	1e4370b018b9c7c8
+1	12	0	clean	1e4370b018b9c7c8

@@ -1,0 +1,476 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 19 min SDK version: arm64-v8a",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "No CMake version was specified in build.gradle. Using default version 3.10.2.",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\\android_gradle_build.json due to:",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "- expected json C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\\android_gradle_build.json file is not present, will remove stale json folder",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "- missing previous command file C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\\build_command.txt, will remove stale json folder",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "removing stale contents from \u0027C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\u0027",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "created folder \u0027C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\u0027",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HC:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\n-DCMAKE_CXX_FLAGS\u003d-fexceptions\n-DCMAKE_C_FLAGS\u003d-D__KITKAT__\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DCMAKE_TOOLCHAIN_FILE\u003dC:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_NDK\u003dC:\\android\\sdk\\ndk\\24.0.8215888\n-DANDROID_PLATFORM\u003dandroid-19\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_ANDROID_NDK\u003dC:\\android\\sdk\\ndk\\24.0.8215888\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\build\\intermediates\\cmake\\kitkatDebug\\obj\\arm64-v8a\n-DCMAKE_MAKE_PROGRAM\u003dC:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d19\n-DTARGET\u003d__KITKAT__\n-BC:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\n-GNinja\njvmArgs : \n\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "[\u003d\u003d \"CMake Server\" \u003d\u003d[\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"supportedProtocolVersions\":[{\"isExperimental\":true,\"major\":1,\"minor\":1}],\"type\":\"hello\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "]\u003d\u003d \"CMake Server\" \u003d\u003d]\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"handshake\",\n  \"cookie\": \"gradle-cmake-cookie\",\n  \"protocolVersion\": {\n    \"isExperimental\": true,\n    \"major\": 1,\n    \"minor\": 1\n  },\n  \"sourceDirectory\": \"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary\",\n  \"buildDirectory\": \"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a\",\n  \"generator\": \"Ninja\"\n}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"gradle-cmake-cookie\",\"inReplyTo\":\"handshake\",\"type\":\"reply\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"configure\",\n  \"cacheArguments\": [\n    \"\",\n    \"-DCMAKE_CXX_FLAGS\\u003d-fexceptions\",\n    \"-DCMAKE_C_FLAGS\\u003d-D__KITKAT__\",\n    \"-DCMAKE_BUILD_TYPE\\u003dDebug\",\n    \"-DCMAKE_TOOLCHAIN_FILE\\u003dC:\\\\android\\\\sdk\\\\ndk\\\\24.0.8215888\\\\build\\\\cmake\\\\android.toolchain.cmake\",\n    \"-DANDROID_ABI\\u003darm64-v8a\",\n    \"-DANDROID_NDK\\u003dC:\\\\android\\\\sdk\\\\ndk\\\\24.0.8215888\",\n    \"-DANDROID_PLATFORM\\u003dandroid-19\",\n    \"-DCMAKE_ANDROID_ARCH_ABI\\u003darm64-v8a\",\n    \"-DCMAKE_ANDROID_NDK\\u003dC:\\\\android\\\\sdk\\\\ndk\\\\24.0.8215888\",\n    \"-DCMAKE_EXPORT_COMPILE_COMMANDS\\u003dON\",\n    \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\\u003dC:\\\\wallet_app\\\\tidecoin-android-miner\\\\bitzenymininglibrary\\\\build\\\\intermediates\\\\cmake\\\\kitkatDebug\\\\obj\\\\arm64-v8a\",\n    \"-DCMAKE_MAKE_PROGRAM\\u003dC:\\\\android\\\\sdk\\\\cmake\\\\3.10.2.4988404\\\\bin\\\\ninja.exe\",\n    \"-DCMAKE_SYSTEM_NAME\\u003dAndroid\",\n    \"-DCMAKE_SYSTEM_VERSION\\u003d19\",\n    \"-DTARGET\\u003d__KITKAT__\"\n  ]\n}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Warning at C:/android/sdk/ndk/24.0.8215888/build/cmake/android-legacy.toolchain.cmake:415 (message):\\n  An old version of CMake is being used that cannot automatically detect\\n  compiler attributes.  Compiler identification is being bypassed.  Some\\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\\n  CMake\u0027s built-in compiler identification.\\nCall Stack (most recent call first):\\n  C:/android/sdk/ndk/24.0.8215888/build/cmake/android.toolchain.cmake:54 (include)\\n  C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\\n  CMakeLists.txt\\n\\n\",\"title\":\"Warning\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "WARN",
+    "message": "CMake Warning at C:/android/sdk/ndk/24.0.8215888/build/cmake/android-legacy.toolchain.cmake:415 (message):\r\n  An old version of CMake is being used that cannot automatically detect\r\n  compiler attributes.  Compiler identification is being bypassed.  Some\r\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\r\n  CMake\u0027s built-in compiler identification.\r\nCall Stack (most recent call first):\r\n  C:/android/sdk/ndk/24.0.8215888/build/cmake/android.toolchain.cmake:54 (include)\r\n  C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake:94 (include)\r\n  CMakeLists.txt\r\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working C compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working C compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Warning at C:/android/sdk/ndk/24.0.8215888/build/cmake/android-legacy.toolchain.cmake:415 (message):\\n  An old version of CMake is being used that cannot automatically detect\\n  compiler attributes.  Compiler identification is being bypassed.  Some\\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\\n  CMake\u0027s built-in compiler identification.\\nCall Stack (most recent call first):\\n  C:/android/sdk/ndk/24.0.8215888/build/cmake/android.toolchain.cmake:54 (include)\\n  C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\\n  C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\\n\\n\",\"title\":\"Warning\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "WARN",
+    "message": "CMake Warning at C:/android/sdk/ndk/24.0.8215888/build/cmake/android-legacy.toolchain.cmake:415 (message):\r\n  An old version of CMake is being used that cannot automatically detect\r\n  compiler attributes.  Compiler identification is being bypassed.  Some\r\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\r\n  CMake\u0027s built-in compiler identification.\r\nCall Stack (most recent call first):\r\n  C:/android/sdk/ndk/24.0.8215888/build/cmake/android.toolchain.cmake:54 (include)\r\n  C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\r\n  C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\r\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":33,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working C compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working C compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compiler ABI info\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compiler ABI info",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":65,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compiler ABI info - done\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compiler ABI info - done",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compile features\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compile features",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":96,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":126,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":155,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compile features - done\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compile features - done",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working CXX compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working CXX compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":184,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working CXX compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working CXX compiler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compiler ABI info\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compiler ABI info",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":211,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compiler ABI info - done\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compiler ABI info - done",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compile features\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compile features",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":237,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":262,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":287,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":311,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compile features - done\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compile features - done",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":334,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"The ASM compiler identification is Clang 14.0.1\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "The ASM compiler identification is Clang 14.0.1",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Found assembler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Found assembler: C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":950,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring done\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Configuring done",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"type\":\"reply\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"compute\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"progressCurrent\":500,\"progressMaximum\":1000,\"progressMessage\":\"Generating\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Generating\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"message\":\"Generating done\",\"type\":\"message\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Generating done",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"type\":\"reply\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"cmakeInputs\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"buildFiles\":[{\"isCMake\":true,\"isTemporary\":false,\"sources\":[\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineASMCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeASMCompiler.cmake.in\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeASMInformation.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-ASM.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-ASM.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestASMCompiler.cmake\"]},{\"isCMake\":false,\"isTemporary\":false,\"sources\":[\"CMakeLists.txt\",\"C:/android/sdk/ndk/24.0.8215888/build/cmake/android.toolchain.cmake\",\"C:/android/sdk/ndk/24.0.8215888/build/cmake/android-legacy.toolchain.cmake\",\"C:/android/sdk/ndk/24.0.8215888/build/cmake/platforms.cmake\",\"C:/android/sdk/ndk/24.0.8215888/build/cmake/compiler_id.cmake\",\"C:/android/sdk/ndk/24.0.8215888/build/cmake/android.toolchain.cmake\",\"src/main/cpp/libcpuminer/CMakeLists.txt\"]},{\"isCMake\":false,\"isTemporary\":true,\"sources\":[\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.c\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.c\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.c\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake\",\".cxx/cmake/kitkatDebug/arm64-v8a/CMakeFiles/3.10.2/CMakeASMCompiler.cmake\"]}],\"cmakeRootDirectory\":\"C:/android/sdk/cmake/3.10.2.4988404/share/cmake-3.10\",\"cookie\":\"\",\"inReplyTo\":\"cmakeInputs\",\"sourceDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary\",\"type\":\"reply\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"codemodel\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"configurations\":[{\"name\":\"Debug\",\"projects\":[{\"buildDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a\",\"name\":\"Project\",\"sourceDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary\",\"targets\":[{\"artifacts\":[\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/build/intermediates/cmake/kitkatDebug/obj/arm64-v8a/libbitzenymininglibrary.so\"],\"buildDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a\",\"fileGroups\":[{\"compileFlags\":\"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security  -fexceptions -fno-limit-debug-info  -fPIC  \",\"defines\":[\"bitzenymininglibrary_EXPORTS\"],\"isGenerated\":false,\"language\":\"CXX\",\"sources\":[\"src/main/cpp/bitzenymininglibrary.cpp\"]}],\"fullName\":\"libbitzenymininglibrary.so\",\"linkFlags\":\"-static-libstdc++ -Wl,--build-id\u003dsha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments\",\"linkLibraries\":\"-llog src\\\\main\\\\cpp\\\\libcpuminer\\\\libcpuminer.a ..\\\\..\\\\..\\\\..\\\\..\\\\distribution\\\\curl\\\\lib19\\\\arm64-v8a\\\\libcurl.a ..\\\\..\\\\..\\\\..\\\\..\\\\distribution\\\\zlib\\\\lib19\\\\arm64-v8a\\\\libz.a ..\\\\..\\\\..\\\\..\\\\..\\\\distribution\\\\jansson\\\\lib19\\\\arm64-v8a\\\\libjansson.a -latomic -lm\",\"linkerLanguage\":\"CXX\",\"name\":\"bitzenymininglibrary\",\"sourceDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary\",\"sysroot\":\"C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/sysroot\",\"type\":\"SHARED_LIBRARY\"},{\"artifacts\":[\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a/src/main/cpp/libcpuminer/libcpuminer.a\"],\"buildDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/.cxx/cmake/kitkatDebug/arm64-v8a/src/main/cpp/libcpuminer\",\"fileGroups\":[{\"compileFlags\":\" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security -D__KITKAT__ -g -O3 -fno-limit-debug-info  -fPIC  \",\"defines\":[\"__STDC_CONSTANT_MACROS\",\"__STDC_LIMIT_MACROS\",\"__linux\"],\"includePath\":[{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/src/main/cpp/libcpuminer\"},{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/../distribution/zlib/include\"},{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/../distribution/curl/include\"},{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/../distribution/jansson/include\"}],\"isGenerated\":false,\"language\":\"C\",\"sources\":[\"scrypt.c\",\"sha2.c\",\"util.c\",\"yescrypt.c\",\"yespower/yespower.c\",\"yespower/sha256.c\",\"libcpuminer.c\"]},{\"compileFlags\":\"-g -O3 -fno-limit-debug-info  -fPIC  \",\"defines\":[\"__STDC_CONSTANT_MACROS\",\"__STDC_LIMIT_MACROS\",\"__linux\"],\"includePath\":[{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/src/main/cpp/libcpuminer\"},{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/../distribution/zlib/include\"},{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/../distribution/curl/include\"},{\"path\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/../distribution/jansson/include\"}],\"isGenerated\":false,\"language\":\"ASM\",\"sources\":[\"scrypt-arm.S\",\"scrypt-x64.S\",\"scrypt-x86.S\",\"sha2-arm.S\",\"sha2-x64.S\",\"sha2-x86-notextrel.S\"]}],\"fullName\":\"libcpuminer.a\",\"linkerLanguage\":\"C\",\"name\":\"cpuminer\",\"sourceDirectory\":\"C:/wallet_app/tidecoin-android-miner/bitzenymininglibrary/src/main/cpp/libcpuminer\",\"sysroot\":\"C:/android/sdk/ndk/24.0.8215888/toolchains/llvm/prebuilt/windows-x86_64/sysroot\",\"type\":\"STATIC_LIBRARY\"}]}]}],\"cookie\":\"\",\"inReplyTo\":\"codemodel\",\"type\":\"reply\"}\n",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing cmake",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write build output C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\\build_output.txt",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\arm64-v8a\\build_command.txt",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+    "tag": "kitkatDebug|arm64-v8a"
+  }
+]

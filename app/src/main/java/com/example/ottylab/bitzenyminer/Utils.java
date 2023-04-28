@@ -12,7 +12,6 @@ public class Utils {
             try {
                 queue.take();
             } catch (InterruptedException e){
-                ;
             }
         }
 

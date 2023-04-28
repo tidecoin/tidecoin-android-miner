@@ -4,10 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     tools:context="com.example.ottylab.bitzenyminer.MainActivity">
+    <LinearLayout
+        android:id="@+id/lh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center"
+        android:orientation="horizontal">
 
-    <EditText
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/idBtnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:backgroundTint="@android:color/holo_green_light"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
         android:id="@+id/editTextUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,82 +36,245 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="user.worker"
-        android:inputType="textPersonName"
+        android:textSize="12sp"
+        android:textColorHint="@color/txt_inactive"
+        android:textColor="#e85238"
+        android:inputType="none"
+        android:hint="@string/my_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center">
 
-    <EditText
-        android:id="@+id/editTextNThreads"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="number of threads (auto: 0 or empty)"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/meter_hashrate_ticks"
+            android:layout_width="296dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sv_backgroundCircleColor="@color/colorPrimaryDark"
+            app:sv_centerCircleColor="@color/colorPrimaryDark"
+            app:sv_indicator="NoIndicator"
+            app:sv_indicatorColor="#e8efff"
+            app:sv_indicatorWidth="0dp"
+            app:sv_markColor="#afb8c9"
+            app:sv_maxSpeed="500"
+            app:sv_minSpeed="0"
+            app:sv_speedBackgroundColor="@color/colorPrimaryDark"
+            app:sv_speedTextSize="0dp"
+            app:sv_speedometerWidth="2dp"
+            app:sv_textColor="@android:color/transparent"
+            app:sv_textSize="10dp"
+            app:sv_tickNumber="0"
+            app:sv_tickPadding="15dp"
+            app:sv_tickRotation="false"
+            app:sv_unitTextSize="0dp"
+            app:sv_withEffects="false"
+            app:sv_withTremble="false" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
+        <com.github.anastr.speedviewlib.TubeSpeedometer
+            android:id="@+id/meter_cores"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sv_centerCircleColor="@color/colorPrimaryDark"
+            app:sv_indicator="NoIndicator"
+            app:sv_indicatorWidth="0dp"
+            app:sv_markColor="@android:color/transparent"
+            app:sv_maxSpeed="4"
+            app:sv_minSpeed="0"
+            app:sv_speedTextSize="0dp"
+            app:sv_speedometerBackColor="#2f333d"
+            app:sv_speedometerWidth="2dp"
+            app:sv_textSize="0dp"
+            app:sv_tickNumber="5"
+            app:sv_unitTextSize="0dp"
+            app:sv_withTremble="false" />
 
-        <Button
-            android:id="@+id/buttonDrive"
+        <com.github.anastr.speedviewlib.TubeSpeedometer
+            android:id="@+id/meter_cores_gap"
+            android:layout_width="215dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sv_centerCircleColor="@color/colorPrimaryDark"
+            app:sv_indicator="NoIndicator"
+            app:sv_indicatorWidth="0dp"
+            app:sv_markColor="@android:color/transparent"
+            app:sv_maxSpeed="4"
+            app:sv_minSpeed="0"
+            app:sv_speedTextSize="0dp"
+            app:sv_speedometerBackColor="@color/colorPrimaryDark"
+            app:sv_speedometerWidth="0dp"
+            app:sv_textColor="@color/colorPrimaryDark"
+            app:sv_textSize="25sp"
+            app:sv_tickNumber="5"
+            app:sv_tickPadding="0sp"
+            app:sv_unitTextSize="0dp"
+            app:sv_withTremble="false" />
+
+        <com.github.anastr.speedviewlib.TubeSpeedometer
+            android:id="@+id/meter_accepted_hash"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sv_indicator="TriangleIndicator"
+            app:sv_indicatorColor="#f29333"
+            app:sv_indicatorWidth="10dp"
+            app:sv_maxSpeed="500"
+            app:sv_minSpeed="0"
+            app:sv_speedTextSize="0dp"
+            app:sv_speedometerBackColor="@android:color/transparent"
+            app:sv_speedometerWidth="5dp"
+            app:sv_textSize="0dp"
+            app:sv_unitTextSize="0dp"
+            app:sv_withTremble="false" />
+
+        <com.github.anastr.speedviewlib.TubeSpeedometer
+            android:id="@+id/meter_hashrate"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sv_indicator="QuarterLineIndicator"
+            app:sv_indicatorColor="#e8efff"
+            app:sv_indicatorWidth="3dp"
+            app:sv_maxSpeed="500"
+            app:sv_minSpeed="0"
+            app:sv_speedTextSize="0dp"
+            app:sv_speedometerBackColor="#2f333d"
+            app:sv_speedometerWidth="7dp"
+            app:sv_textSize="0dp"
+            app:sv_trembleDegree="2"
+            app:sv_trembleDuration="500"
+            app:sv_unitTextSize="0dp"
+            app:sv_withTremble="true" />
+
+        <LinearLayout
+            android:id="@+id/layout_hashrate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:text="Start"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
 
-        <CheckBox
-            android:id="@+id/checkBoxBenchmark"
-            android:layout_width="106dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:text="Benchmark"
-            app:layout_constraintLeft_toRightOf="@+id/editTextNThreads"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="Hashes/second"
+                android:textColor="#afb8c9"
+                android:textSize="14sp"
+                android:textStyle="normal" />
 
-        <Spinner
-            android:id="@+id/spinnerAlgorithm"
-            android:layout_width="116dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/hashrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/txt_inactive"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:text="Battery Temp"
+                android:textAllCaps="true"
+                android:textColor="@color/c_orange"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/accuTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:gravity="end"
+                android:text="@string/na"
+                android:textColor="@color/txt_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_status"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/miner_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:textColor="@color/txt_secondary"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/hr_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="end"
+                    android:text="100%"
+                    android:textColor="@color/c_blue"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_status"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:indeterminate="false"
+                android:max="60"
+                android:progress="0"/>
+        </LinearLayout>
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textViewLog"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/txt_inactive"
         android:ellipsize="marquee"
         android:gravity="bottom"
         android:scrollbars="vertical" />
+
 </LinearLayout>
