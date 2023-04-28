@@ -411,31 +411,29 @@ public class MiningForeGroundService extends Service {
                             // mine on mobile data
                             if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
-                                BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
-                                if (wakeLock.isHeld()){
-                                    miningLibary.miner.startMining(
-                                            (String)miningPoolAddress,
-                                            (String)tdcAddressProv,
-                                            (String)"x",
-                                            (int)cpuCoresSelected,
-                                            algorithm);
-                                    sendLogs("[STATUS] Mining started");
-                                }else{
-                                    sendLogs("[STATUS] Mining NOT started, will retry...");
-                                }
-                            }
-
-                            // mine without mobile data
-                            if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && mobileDataAvoid && isWiFi && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
-                                wakeLock.acquire(1440*60*1000L /*one day*/);
-                                BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
                                             (String)tdcAddressProv,
                                             (String)password,
                                             (int)cpuCoresSelected,
-                                            algorithm);
+                                            BitZenyMiningLibrary.Algorithm.YESPOWER);
+                                    sendLogs("[STATUS] Mining started");
+                                }else{
+                                    sendLogs("[STATUS] Mining NOT started, will retry...");
+                                }
+                            }
+
+                            // mine with wifi
+                            if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && mobileDataAvoid && isWiFi && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
+                                wakeLock.acquire(1440*60*1000L /*one day*/);
+                                if (wakeLock.isHeld()){
+                                    miningLibary.miner.startMining(
+                                            (String)miningPoolAddress,
+                                            (String)tdcAddressProv,
+                                            (String)password,
+                                            (int)cpuCoresSelected,
+                                            BitZenyMiningLibrary.Algorithm.YESPOWER);
                                     sendLogs("[STATUS] Mining was started");
                                 }else{
                                     sendLogs("[STATUS] Mining NOT started, will retry...");
@@ -465,11 +463,10 @@ public class MiningForeGroundService extends Service {
 
                                 sendLogs(separated[0] + "]" +
                                                "\n"+ separated[1] +
-                                        "\n----------------------------" +
+                                        "\n[STATUS] Device is mining" +
                                         "\nPool: " + pool + " | CPU Cores: " + cpuCoresSelected + " / " + cpuCoresMax +
                                         "\nUse Mobile Data: " + !mobileDataAvoid +" | Battery for Mining: " + batteryForMining +
                                         "\nBattery Level min: " + batteryLevelMin + " %" + " | Battery Temp max: " + batteryTempMax + " °C");
-                                //sendLogs("[STATUS] Device is Mining\nLOG:" + miningLibary.logMessage + "\nPool: " + miningPoolAddress + "\nTDC Address: " + tdcAddressProv + "\nCPU Cores: " + cpuCoresSelected + "/" + cpuCoresMax);
                              }else{
                                 sendHashrate(0, 0, 0, cpuCoresMax, batteryTempMax, tdcAddressProv);
                                 if (wakeLock.isHeld()){
