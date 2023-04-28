@@ -411,6 +411,7 @@ public class MiningForeGroundService extends Service {
                             // mine on mobile data
                             if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
+                                BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
@@ -427,6 +428,7 @@ public class MiningForeGroundService extends Service {
                             // mine with wifi
                             if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && mobileDataAvoid && isWiFi && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
+                                BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
@@ -477,7 +479,6 @@ public class MiningForeGroundService extends Service {
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
-
                             }
                         }
                     }
