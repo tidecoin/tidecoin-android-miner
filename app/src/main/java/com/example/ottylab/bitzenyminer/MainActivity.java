@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
             //  1. show hashrate
             double hashrateNormal = intent.getDoubleExtra("hashrateNormal", 1);
-            //meterHashrate.makeSections(1, getResources().getColor(R.color.c_blue), Section.Style.SQUARE);
-            // will set the highest value as maximum hashrate
             if (hashrateUnconfirmedMax < ((float) (hashrateNormal * cpuCoresMax))) {
                 hashrateUnconfirmedMax = ((float) (hashrateNormal * cpuCoresMax));
                 meterHashrate.setMaxSpeed(hashrateUnconfirmedMax);
@@ -71,13 +69,11 @@ public class MainActivity extends AppCompatActivity {
 
             // 3. meter cores gap
             double batteryTempMax = intent.getDoubleExtra("batteryTempMax", 1);
-            //meter_cores_gap.makeSections((int) cpuCoresMax, getResources().getColor(R.color.c_red_bright), Section.Style.SQUARE);
             meter_cores_gap.setMaxSpeed((float) cpuCoresMax);
             meter_cores_gap.speedTo((float) activeCores, 1);
 
             // 4. confirmed hashrate
             double hashrateConfirmed = intent.getDoubleExtra("hashrateConfirmed", 0);
-            //meter_accepted_hash.makeSections(1, getResources().getColor(R.color.c_yellow), Section.Style.SQUARE);
             if (hashrateConfirmedMax < ((float) ((hashrateConfirmed / activeCores) * cpuCoresMax))) {
                 hashrateConfirmedMax = ((float) ((hashrateConfirmed / activeCores) * cpuCoresMax));
                 meter_accepted_hash.setMaxSpeed(hashrateConfirmedMax);
@@ -86,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
             // 5. set hashrate to string
             if(hashrateNormal == 0) {
-                tvHashrate.setText("0");
+                tvHashrate.setText("-");
             }else{
-                tvHashrate.setText("~"+String.valueOf(Math.round(hashrateNormal*activeCores)));
+                tvHashrate.setText(""+String.valueOf(Math.round(hashrateConfirmed)));
             }
 
             // 6. show accu temp
@@ -123,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
-            // TODO Extract the data returned from the child Activity.
             String returnValue = data.getStringExtra("some_key");
             userAddress.setText(returnValue);
         }
@@ -163,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             startForegroundService(serviceIntentForeground);
         }
 
-        // activate bazzery temp check
+        // activate battery temp check
         IntentFilter intentfilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         MainActivity.this.registerReceiver(broadcastreceiver,intentfilter);
 

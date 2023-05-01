@@ -24,10 +24,8 @@
         </activity>
         <activity
             android:name="com.example.ottylab.bitzenyminer.SettingsActivity"
+            android:theme="@style/MyPreferencesTheme"
             android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name="com.example.ottylab.bitzenyminer.ScannedBarcodeActivity">
         </activity>
         <receiver android:name=".MyBroadcastReceiver"
             android:exported="true">

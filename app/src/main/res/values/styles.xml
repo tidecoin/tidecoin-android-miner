@@ -6,6 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:listViewStyle">@color/colorPrimaryDark</item>
     </style>
+
+    <style name="MyPreferencesTheme" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/txt_secondary</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+    </style>
+
 
 </resources>

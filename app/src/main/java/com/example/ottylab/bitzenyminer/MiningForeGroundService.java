@@ -28,13 +28,6 @@ import com.example.ottylab.bitzenymininglibrary.BitZenyMiningLibrary;
 
 import java.lang.ref.WeakReference;
 
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.os.Bundle;
-import android.preference.EditTextPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-
 class miningHidden extends AppCompatActivity {
     public BitZenyMiningLibrary miner;
     private static JNICallbackHandler sHandler;

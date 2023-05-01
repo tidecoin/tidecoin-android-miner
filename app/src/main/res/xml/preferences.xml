@@ -2,10 +2,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:selectable="false"
-    android:enabled="true"
-    android:key="example_key"
-    android:title="example_title"
-    android:summary="anything_you_want"
+    android:theme="@style/MyPreferencesTheme"
     android:persistent="true">
 
     <PreferenceCategory android:title="Your TDC Address">
