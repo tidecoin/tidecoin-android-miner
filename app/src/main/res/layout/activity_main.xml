@@ -188,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="end"
-                android:text="Battery Temp"
+                android:text="Battery temp."
                 android:textAllCaps="true"
                 android:textColor="@color/c_orange"
                 android:textSize="12sp"

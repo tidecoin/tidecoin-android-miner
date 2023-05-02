@@ -11,4 +11,6 @@ From a battery temperature of 50°C there is a risk of irreversible damage of ba
 
 ![Mining App](/img/1.png)
 ![Settings](/img/2.png)
+![Settings](/img/3.png)
+![Settings](/img/4.png)
 

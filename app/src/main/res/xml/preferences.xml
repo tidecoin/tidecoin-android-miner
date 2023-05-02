@@ -81,7 +81,7 @@
             android:entries="@array/pref_battery_temp_max"
             android:entryValues="@array/pref_duration"
             android:key="@string/battery_temp_max_selected"
-            android:summary="Max Battery Temp"
+            android:summary="Max battery temp."
             android:title="@string/remind_me" />
 
     </PreferenceCategory>
