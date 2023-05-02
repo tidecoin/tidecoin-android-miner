@@ -459,9 +459,9 @@ public class MiningForeGroundService extends Service {
                                 sendLogs(separated[0] + "]" +
                                                "\n"+ separated[1] +
                                         "\n[STATUS] Device is mining" +
-                                        "\nPool: " + pool + " | CPU Cores: " + cpuCoresSelected + " / " + cpuCoresMax +
-                                        "\nUse Mobile Data: " + !mobileDataAvoid +" | Battery for Mining: " + batteryForMining +
-                                        "\nBattery Level min: " + batteryLevelMin + " %" + " | Battery Temp max: " + batteryTempMax + " °C");
+                                        "\nPool: " + pool + " | CPU cores: " + cpuCoresSelected + " / " + cpuCoresMax +
+                                        "\nUse mobile data: " + !mobileDataAvoid +" | Battery for mining: " + batteryForMining +
+                                        "\nBattery level min: " + batteryLevelMin + " %" + " | Battery temp. max: " + batteryTempMax + " °C");
                              }else{
                                 sendHashrate(0, 0, 0, cpuCoresMax, batteryTempMax, tdcAddressProv);
                                 if (wakeLock.isHeld()){
