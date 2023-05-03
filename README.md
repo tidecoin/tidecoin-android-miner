@@ -17,6 +17,8 @@ It is then sufficient, for example, to charge the smartphone at night and mining
 To increase mining performance when device is locked, please check the following.
 - Long press on the app icon. Select "App Info". "Battery usage" -> "Allow all background activity". (A warning will appear that the battery consumption will increase. That's correct. The app will only start mining when the specified properties are met.)
 
+## Screens of app
+
 ![Mining App](/img/1.png)
 ![Settings](/img/2.png)
 ![Settings](/img/3.png)
