@@ -78,7 +78,6 @@
 
     <string-array name="pref_mining_pool">
         <item>tidecoin.exchange</item>
-        <item>tidepool.world</item>
         <item>zpool.ca</item>
     </string-array>
 

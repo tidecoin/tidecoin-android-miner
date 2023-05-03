@@ -26,7 +26,7 @@
     <PreferenceCategory android:title="Mining Options">
         <ListPreference
             android:id="@+id/mining_pool_selected"
-            android:defaultValue="2"
+            android:defaultValue="0"
             android:dialogTitle="@string/mining_pool"
             android:entries="@array/pref_mining_pool"
             android:entryValues="@array/pref_duration"

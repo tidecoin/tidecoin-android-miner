@@ -142,12 +142,8 @@ public class MiningForeGroundService extends Service {
         }
 
         String miningPool = PreferenceManager.getDefaultSharedPreferences(this).getString("mining_pool_selected", "0");
-        if (miningPool.contains("2") && miningPoolAddress != "stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239"){
+        if (miningPool.contains("1") && miningPoolAddress != "stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239"){
             miningPoolAddress = "stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239";
-            someThingChanged = true;
-        }
-        if (miningPool.contains("1") && miningPoolAddress != "stratum+tcp://178.170.40.44:6243"){
-            miningPoolAddress = "stratum+tcp://178.170.40.44:6243";
             someThingChanged = true;
         }
         if (miningPool.contains("0") && miningPoolAddress != "stratum+tcp://eu1-pool.tidecoin.exchange:3033"){
@@ -404,7 +400,6 @@ public class MiningForeGroundService extends Service {
                             // mine on mobile data
                             if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && !mobileDataAvoid && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
-                                BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
@@ -421,7 +416,6 @@ public class MiningForeGroundService extends Service {
                             // mine with wifi
                             if(tdcAddressProv != null && tdcAddressProv != "" && tdcAddressProv.length() > 1 && mobileDataAvoid && isWiFi && BatteryTemp < batteryTempMax && getBatteryPercentage() >= batteryLevelMin && deviceIsCharging && !miningLibary.miner.isMiningRunning()){
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
-                                BitZenyMiningLibrary.Algorithm algorithm = BitZenyMiningLibrary.Algorithm.YESPOWER;
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
                                             (String)miningPoolAddress,
@@ -440,9 +434,6 @@ public class MiningForeGroundService extends Service {
                                 if (miningPoolAddress.contains("zpool")){
                                     pool = "zpool.ca";
                                 }
-                                if (miningPoolAddress.contains("178.170.40.44")){
-                                    pool = "tidepool.world";
-                                }
                                 if (miningPoolAddress.contains("exchange")){
                                     pool = "tidecoin.exchange";
                                 }
@@ -453,7 +444,7 @@ public class MiningForeGroundService extends Service {
                                 separated[0] = miningLibary.logMessage;
                                 separated[1] = "";
                                 if(miningLibary.logMessage.contains("] ")) {
-                                    separated = miningLibary.logMessage.split("]");   
+                                    separated = miningLibary.logMessage.split("]");
                                 }
 
                                 sendLogs(separated[0] + "]" +
