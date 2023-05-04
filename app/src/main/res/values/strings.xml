@@ -17,7 +17,6 @@
     <string name="mining_pool">Mining Pool</string>
     <string name="cores_for_mining">Cores for Mining</string>
     <string name="tdc_address_selected">tdc_address_selected</string>
-    <string name="mining_pool_selected">mining_pool_selected</string>
     <string name="mining_pool_prefs">Pool for mining</string>
     <string name="cpu_cores_prefs">Select number of cores for Mining</string>
     <string name="prefs_second_cpu_thread">prefs_second_cpu_thread</string>
@@ -74,11 +73,6 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
-    </string-array>
-
-    <string-array name="pref_mining_pool">
-        <item>tidecoin.exchange</item>
-        <item>zpool.ca</item>
     </string-array>
 
     <string-array name="cpu_cores_selectable">

@@ -124,7 +124,6 @@ public class MiningForeGroundService extends Service {
     }
 
     String tdcAddressProv = "";
-    String miningPoolAddress = "";
     boolean mobileDataAvoid = true;
     boolean batteryForMining = false;
     Integer cpuCoresSelected = 1;
@@ -138,16 +137,6 @@ public class MiningForeGroundService extends Service {
         String tdcAddress = PreferenceManager.getDefaultSharedPreferences(this).getString("tdc_address_selected", null);
         if (tdcAddressProv != tdcAddress) {
             tdcAddressProv = tdcAddress;
-            someThingChanged = true;
-        }
-
-        String miningPool = PreferenceManager.getDefaultSharedPreferences(this).getString("mining_pool_selected", "0");
-        if (miningPool.contains("1") && miningPoolAddress != "stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239"){
-            miningPoolAddress = "stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239";
-            someThingChanged = true;
-        }
-        if (miningPool.contains("0") && miningPoolAddress != "stratum+tcp://eu1-pool.tidecoin.exchange:3033"){
-            miningPoolAddress = "stratum+tcp://eu1-pool.tidecoin.exchange:3033";
             someThingChanged = true;
         }
 
@@ -387,10 +376,7 @@ public class MiningForeGroundService extends Service {
                                 sendLogs("[STATUS] Device is NOT mining\nPlease provide your TDC - Address.\n'Settings' -> 'Please tab to set your address.' ");
                             }
 
-                            String password = "c=TDC";
-                            if("stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239" == miningPoolAddress){
-                                password = "c=TDC,zap=TDC";
-                            }
+                            String password = "c=TDC,zap=TDC";
 
                             boolean deviceIsCharging = isBatteryCharging();
                             if (batteryForMining){
@@ -402,7 +388,7 @@ public class MiningForeGroundService extends Service {
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
-                                            (String)miningPoolAddress,
+                                            (String)"stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239",
                                             (String)tdcAddressProv,
                                             (String)password,
                                             (int)cpuCoresSelected,
@@ -418,7 +404,7 @@ public class MiningForeGroundService extends Service {
                                 wakeLock.acquire(1440*60*1000L /*one day*/);
                                 if (wakeLock.isHeld()){
                                     miningLibary.miner.startMining(
-                                            (String)miningPoolAddress,
+                                            (String)"stratum+tcp://yespowerTIDE.eu.mine.zpool.ca:6239",
                                             (String)tdcAddressProv,
                                             (String)password,
                                             (int)cpuCoresSelected,
@@ -430,14 +416,6 @@ public class MiningForeGroundService extends Service {
                             }
 
                             if(miningLibary.miner.isMiningRunning()){
-                                String pool = "";
-                                if (miningPoolAddress.contains("zpool")){
-                                    pool = "zpool.ca";
-                                }
-                                if (miningPoolAddress.contains("exchange")){
-                                    pool = "tidecoin.exchange";
-                                }
-
                                 sendHashrate(miningLibary.hashrateConfirmed, miningLibary.hashrateNormal,  cpuCoresSelected, cpuCoresMax, batteryTempMax, tdcAddressProv);
 
                                 String[] separated = new String[2];
@@ -450,7 +428,7 @@ public class MiningForeGroundService extends Service {
                                 sendLogs(separated[0] + "]" +
                                                "\n"+ separated[1] +
                                         "\n[STATUS] Device is mining" +
-                                        "\nPool: " + pool + " | CPU cores: " + cpuCoresSelected + " / " + cpuCoresMax +
+                                        "\nPool: zpool.ca " + " | CPU cores: " + cpuCoresSelected + " / " + cpuCoresMax +
                                         "\nUse mobile data: " + !mobileDataAvoid +" | Battery for mining: " + batteryForMining +
                                         "\nBattery level min: " + batteryLevelMin + " %" + " | Battery temp. max: " + batteryTempMax + " °C");
                              }else{
