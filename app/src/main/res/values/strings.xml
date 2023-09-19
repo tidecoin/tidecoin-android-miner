@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Tidecoin Miner</string>
+    <string name="na">n/a</string>
+
+    <string name="battery_temp_max">Battery Temp. Max.</string>
+    <string name="battery_temp_max_selected">battery_temp_max_selected</string>
+    <string name="remind_me">Battery Temp</string>
+    <string name="remind_me_for_bed_time">remind_me_for_bed_time</string>
+    <string name="limit_data_usage_selected">limit_data_usage_selected</string>
+    <string name="mine_wifi">Only use Wi-Fi for mining</string>
+    <string name="avoid_mobile_usage">Avoid mobile data usage</string>
+    <string name="battery_level_min">Battery Level</string>
+    <string name="cpu_threads_groups">CPU Usage</string>
+    <string name="battery_level_min_selected">battery_level_min_selected</string>
+    <string name="cpu_threads_enabled">cpu_threads_enabled</string>
+    <string name="seconds">Battery Level to start Mining</string>
+    <string name="mining_pool">Mining Pool</string>
+    <string name="cores_for_mining">Cores for Mining</string>
+    <string name="tdc_address_selected">tdc_address_selected</string>
+    <string name="mining_pool_selected">mining_pool_selected</string>
+    <string name="mining_pool_prefs">Select Pool for Mining</string>
+    <string name="cpu_cores_prefs">Select number of cores for Mining</string>
+    <string name="prefs_second_cpu_thread">prefs_second_cpu_thread</string>
+    <string name="enable_second_thread">Settings for usage of CPU.</string>
+    <string name="enable_second_thread_description">CPU Usage</string>
+    <string name="prefs_enable_stats">prefs_enable_stats</string>
+    <string name="enable_stats">Enable stats for nerds</string>
+    <string name="setAddress">Set Address</string>
+    <string name="my_hint">Please provide address</string>
+    <string name="cpu_threads_mining" />
+    <string name="cpu_threads_selected" />
+    <string name="accu_for_mining">accu_for_mining</string>
+    <string name="accu_mining_desc">You can use accumulator for mining</string>
+    <string name="accu_mining_title">Mine on battery</string>
+
+    <string-array name="pref_battery_temp_max">
+        <item>35 °C</item>
+        <item>40 °C</item>
+        <item>42 °C</item>
+        <item>45 °C</item>
+        <item>48 °C</item>
+        <item>50 °C (!)</item>
+        <item>60 °C (!)</item>
+        <item>70 °C (!)</item>
+        <item>80 °C (!)</item>
+        <item>90 °C (!)</item>
+    </string-array>
+
+    <string-array name="pref_battery_level">
+        <item>0 %</item>
+        <item>20 %</item>
+        <item>50 %</item>
+        <item>80 %</item>
+        <item>90 %</item>
+        <item>95 %</item>
+    </string-array>
+
+    <string-array name="pref_thread_number">
+        <item>15 %</item>
+        <item>25 %</item>
+        <item>50 %</item>
+        <item>75 %</item>
+        <item>100 %</item>
+    </string-array>
+
+    <string-array name="pref_duration">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="pref_mining_pool">
+        <item>tidecoin.exchange</item>
+        <item>tidepool.world</item>
+        <item>zpool.ca</item>
+    </string-array>
+
+    <string-array name="cpu_cores_selectable">
+        <item>1 Core</item>
+        <item>2 Cores</item>
+        <item>3 Cores</item>
+        <item>4 Cores</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,215 @@
+{
+  "abi": "ARMEABI_V7A",
+  "abiPlatformVersion": 19,
+  "buildSettings": {
+    "environmentVariables": []
+  },
+  "cmake": {
+    "cmakeArtifactsBaseFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\armeabi-v7a",
+    "cmakeServerLogFile": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\armeabi-v7a\\cmake_server_log.txt",
+    "cmakeWrappingBaseFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cxx\\kitkatDebug\\armeabi-v7a",
+    "effectiveConfiguration": {
+      "name": "traditional-android-studio-cmake-environment",
+      "description": "Composite reified CMakeSettings configuration",
+      "generator": "Ninja",
+      "inheritEnvironments": [
+        "ndk"
+      ],
+      "buildRoot": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\armeabi-v7a",
+      "cmakeToolchain": "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\android.toolchain.cmake",
+      "cmakeExecutable": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
+      "variables": [
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-fexceptions"
+        },
+        {
+          "name": "CMAKE_C_FLAGS",
+          "value": "-D__KITKAT__"
+        },
+        {
+          "name": "CMAKE_BUILD_TYPE",
+          "value": "Debug"
+        },
+        {
+          "name": "CMAKE_TOOLCHAIN_FILE",
+          "value": "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\android.toolchain.cmake"
+        },
+        {
+          "name": "ANDROID_ABI",
+          "value": "armeabi-v7a"
+        },
+        {
+          "name": "ANDROID_NDK",
+          "value": "C:\\android\\sdk\\ndk\\24.0.8215888"
+        },
+        {
+          "name": "ANDROID_PLATFORM",
+          "value": "android-19"
+        },
+        {
+          "name": "CMAKE_ANDROID_ARCH_ABI",
+          "value": "armeabi-v7a"
+        },
+        {
+          "name": "CMAKE_ANDROID_NDK",
+          "value": "C:\\android\\sdk\\ndk\\24.0.8215888"
+        },
+        {
+          "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
+          "value": "ON"
+        },
+        {
+          "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
+          "value": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\build\\intermediates\\cmake\\kitkatDebug\\obj\\armeabi-v7a"
+        },
+        {
+          "name": "CMAKE_MAKE_PROGRAM",
+          "value": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe"
+        },
+        {
+          "name": "CMAKE_SYSTEM_NAME",
+          "value": "Android"
+        },
+        {
+          "name": "CMAKE_SYSTEM_VERSION",
+          "value": "19"
+        },
+        {
+          "name": "TARGET",
+          "value": "__KITKAT__"
+        }
+      ]
+    }
+  },
+  "cxxBuildFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\armeabi-v7a",
+  "info": {
+    "abi": "ARMEABI_V7A",
+    "bitness": 32,
+    "deprecated": false,
+    "default": true
+  },
+  "originalCxxBuildFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx\\cmake\\kitkatDebug\\armeabi-v7a",
+  "variant": {
+    "buildSystemArgumentList": [
+      "-DTARGET\u003dSTANDARD",
+      "-DTARGET\u003d__KITKAT__"
+    ],
+    "buildTargetSet": [],
+    "cFlagsList": [
+      "-D__KITKAT__"
+    ],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
+    "cppFlagsList": [
+      "-fexceptions"
+    ],
+    "isDebuggableEnabled": true,
+    "module": {
+      "buildSystem": "CMAKE",
+      "cmake": {
+        "cmakeExe": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
+        "minimumCmakeVersion": "3.10.2",
+        "ninjaExe": "C:\\android\\sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe"
+      },
+      "cmakeToolchainFile": "C:\\android\\sdk\\ndk\\24.0.8215888\\build\\cmake\\android.toolchain.cmake",
+      "cxxFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\.cxx",
+      "gradleModulePathName": ":bitzenymininglibrary",
+      "intermediatesFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\build\\intermediates",
+      "makeFile": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\CMakeLists.txt",
+      "moduleBuildFile": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\build.gradle",
+      "moduleRootFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary",
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkFolder": "C:\\android\\sdk\\ndk\\24.0.8215888",
+      "ndkMetaAbiList": [
+        {
+          "abi": "ARMEABI_V7A",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "ARM64_V8A",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86_64",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        }
+      ],
+      "ndkMetaPlatforms": {
+        "min": 19,
+        "max": 32,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28,
+          "Q": 29,
+          "R": 30,
+          "S": 31,
+          "Sv2": 32
+        }
+      },
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkVersion": "24.0.8215888",
+      "project": {
+        "compilerSettingsCacheFolder": "C:\\wallet_app\\tidecoin-android-miner\\.cxx",
+        "cxxFolder": "C:\\wallet_app\\tidecoin-android-miner\\.cxx",
+        "isBuildOnlyTargetAbiEnabled": true,
+        "isCmakeBuildCohabitationEnabled": false,
+        "isNativeCompilerSettingsCacheEnabled": false,
+        "rootBuildGradleFolder": "C:\\wallet_app\\tidecoin-android-miner",
+        "sdkFolder": "C:\\android\\sdk"
+      },
+      "splitsAbiFilterSet": [],
+      "stlSharedObjectMap": {
+        "LIBCXX_SHARED": {
+          "ARMEABI_V7A": "C:\\android\\sdk\\ndk\\24.0.8215888\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\libc++_shared.so",
+          "ARM64_V8A": "C:\\android\\sdk\\ndk\\24.0.8215888\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\libc++_shared.so",
+          "X86": "C:\\android\\sdk\\ndk\\24.0.8215888\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\i686-linux-android\\libc++_shared.so",
+          "X86_64": "C:\\android\\sdk\\ndk\\24.0.8215888\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\x86_64-linux-android\\libc++_shared.so"
+        },
+        "LIBCXX_STATIC": {},
+        "NONE": {},
+        "SYSTEM": {}
+      }
+    },
+    "objFolder": "C:\\wallet_app\\tidecoin-android-miner\\bitzenymininglibrary\\build\\intermediates\\cmake\\kitkatDebug\\obj",
+    "variantName": "kitkatDebug",
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86"
+    ]
+  }
+}

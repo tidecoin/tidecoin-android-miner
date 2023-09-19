@@ -1,0 +1,23 @@
+Executable : C:\android\sdk\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+-HC:\wallet_app\tidecoin-android-miner\bitzenymininglibrary
+-DCMAKE_CXX_FLAGS=-fexceptions
+-DCMAKE_C_FLAGS=-D__KITKAT__
+-DCMAKE_BUILD_TYPE=Debug
+-DCMAKE_TOOLCHAIN_FILE=C:\android\sdk\ndk\24.0.8215888\build\cmake\android.toolchain.cmake
+-DANDROID_ABI=x86
+-DANDROID_NDK=C:\android\sdk\ndk\24.0.8215888
+-DANDROID_PLATFORM=android-19
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DCMAKE_ANDROID_NDK=C:\android\sdk\ndk\24.0.8215888
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\wallet_app\tidecoin-android-miner\bitzenymininglibrary\build\intermediates\cmake\kitkatDebug\obj\x86
+-DCMAKE_MAKE_PROGRAM=C:\android\sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=19
+-DTARGET=__KITKAT__
+-BC:\wallet_app\tidecoin-android-miner\bitzenymininglibrary\.cxx\cmake\kitkatDebug\x86
+-GNinja
+jvmArgs : 
+
+Build command args:
